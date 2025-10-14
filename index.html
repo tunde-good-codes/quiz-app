@@ -1,0 +1,113 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Student Quiz App</title>
+    <link rel="stylesheet" href="style.css" />
+  </head>
+  <body>
+    <!-- ================= FORM PAGE ================= -->
+    <section id="form-page" class="page active">
+      <form id="student-form">
+        <img src="./logo.png" alt="logo" style="height: 60px; width: 60px" />
+        <h1>Welcome to the GSS Omu-Aran Quiz Web-App</h1>
+
+        <div class="form-wrapper">
+          <label for="name">Student Name:</label>
+          <input
+            type="text"
+            id="name"
+            required
+            class="form-input"
+            placeholder="Enter your full name"
+          />
+        </div>
+        <div class="form-wrapper">
+          <label for="class">Class:</label>
+          <input
+            type="text"
+            id="class"
+            required
+            class="form-input"
+            placeholder="Enter your class"
+          />
+        </div>
+
+        <div class="form-wrapper">
+          <label for="class">class-arm:</label>
+          <select id="class-arm">
+            <option value="art">Select Your Class Arm</option>
+            <option value="art">Art</option>
+            <option value="commercial">Commercial</option>
+            <option value="science">Science</option>
+          </select>
+        </div>
+
+        <button type="submit">Continue</button>
+      </form>
+    </section>
+
+    <!-- ================= INSTRUCTION PAGE ================= -->
+    <section id="instruction-page" class="page">
+      <h2>Quiz Instructions</h2>
+      <div class="instruction-text">
+        <ol>
+          <li>Answer all questions carefully</li>
+          <li>
+            select your desired subject and click <b>start quiz </b> to start
+          </li>
+          <li>
+            you can move between questions using <b>previous</b> and
+            <b>next</b> buttons
+          </li>
+          <li>when finished, click <b>submit</b></li>
+        </ol>
+        <p>
+          The timer will start as soon as you begin the quiz. Make sure to
+          complete before time runs out!
+        </p>
+        <em
+          >Be mindful of your timer, if you don't complete before the timer hits
+          <b>zero</b> it'll automatically submit</em
+        >
+      </div>
+
+      <h3>Select Subject</h3>
+      <select id="subject-select">
+        <option value="english">English (5 min)</option>
+        <option value="math">Mathematics (8 min)</option>
+        <option value="science">Science (5 min)</option>
+        <option value="history">History (5
+          SC min)</option>
+      </select>
+
+      <button id="start-quiz">Start Quiz</button>
+    </section>
+
+    <!-- ================= QUIZ PAGE ================= -->
+    <section id="quiz-page" class="page">
+      <div class="quiz-header">
+        <h2 id="quiz-subject" class="quiz-subject"></h2>
+        <p id="timer">Time Left: 00:00</p>
+      </div>
+
+      <div id="question-container"></div>
+
+      <div class="quiz-controls">
+        <button id="prev-btn">Previous</button>
+        <button id="next-btn">Next</button>
+        <button id="submit-btn">Submit</button>
+      </div>
+    </section>
+
+    <!-- ================= RESULT PAGE ================= -->
+    <section id="result-page" class="page">
+      <h2>Quiz Result</h2>
+      <p id="result-text"></p>
+      <button id="restart-btn">Restart Quiz</button>
+    </section>
+
+    <script type="module"  src="script.js"  ></script>
+  </body>
+</html>
